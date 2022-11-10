@@ -5,7 +5,7 @@ import { useState } from 'react';
 import FoodBox from './components/FoodBox';
 import { Row, Divider, Button, Input } from 'antd';
 import SearchBar from './components/SearchBar';
-import AddFoodForm from "./components/AddFoodForm"
+import AddFoodForm from './components/AddFoodForm';
 
 function App() {
   //useState é como o react quer que a gente crie nossas variáveis
@@ -32,7 +32,7 @@ function App() {
         food={food}
       />  */}
 
-      <AddFoodForm />
+      <AddFoodForm allFoods={allFoods} setAllFoods={setAllFoods} />
 
       <SearchBar search={search} setSearch={setSearch} />
 
