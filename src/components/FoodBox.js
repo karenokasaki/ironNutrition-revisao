@@ -6,7 +6,7 @@ import { Card, Col, Button } from 'antd';
 function FoodBox({ food }) {
   // console.log(props) -> props é um OBJETO por isso ele pode ser descontruido!!
 
-  console.log(food); // -> name: "orange", calories: 85
+  //console.log(food); // -> name: "orange", calories: 85
 
   return (
     <Col>
