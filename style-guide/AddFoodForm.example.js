@@ -11,7 +11,7 @@ function AddFoodForm(props) {
       <Divider>Add Food Entry</Divider>
 
       <label>Name</label>
-      <Input value={undefined} type="text" onChange={() => {}} />
+      <Input value={undefined} name="name" type="text" onChange={() => {}} />
 
       <label>Image</label>
       {/* render antd <Input /> type="text" here */}

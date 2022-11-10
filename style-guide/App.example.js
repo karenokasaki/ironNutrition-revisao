@@ -17,6 +17,7 @@ function App() {
 
       <Row style={{ width: '100%', justifyContent: 'center' }}>
         {/* Render the list of Food Box components here */}
+        
       </Row>
     </div>
   );
