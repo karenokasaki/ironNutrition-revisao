@@ -13,7 +13,13 @@ function App() {
   //useState() é a descontrução de uma array
   const [allFoods, setAllFoods] = useState(foods);
   const [search, setSearch] = useState('');
+  const [showForm, setShowForm] = useState(false);
 
+  function handleShowForm() {
+    setShowForm(!showForm);
+  }
+
+  console.log(showForm);
   /* const [food, setFood] = useState({
     name: 'Orange',
     calories: 85,
@@ -32,7 +38,11 @@ function App() {
         food={food}
       />  */}
 
-      <AddFoodForm allFoods={allFoods} setAllFoods={setAllFoods} />
+      {showForm === true && (
+        <AddFoodForm allFoods={allFoods} setAllFoods={setAllFoods} />
+      )}
+
+      <Button onClick={handleShowForm}>{showForm === true ? <span>Hide Form</span> : <span>Add New Food</span> }</Button>
 
       <SearchBar search={search} setSearch={setSearch} />
 
@@ -47,7 +57,14 @@ function App() {
             );
           })
           .map((food) => {
-            return <FoodBox food={food} key={food.name} />;
+            return (
+              <FoodBox
+                food={food}
+                key={food.name}
+                allFoods={allFoods}
+                setAllFoods={setAllFoods}
+              />
+            );
           })}
       </Row>
     </div>

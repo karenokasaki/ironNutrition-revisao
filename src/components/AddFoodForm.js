@@ -21,6 +21,13 @@ function AddFoodForm({ allFoods, setAllFoods }) {
     e.preventDefault();
     //é responsável por guardar o form preenchido em algum lugar -> allFoods
     setAllFoods([...allFoods, form]);
+
+    setForm({
+      name: '',
+      image: '',
+      calories: '',
+      servings: '',
+    });
   }
 
   return (
